@@ -27,15 +27,14 @@ function setup(){
     ball = createSprite(random(20,750),100, 40,40);
     ball.shapeColor = rgb(255,255,255);
     //write code to add velocityX and velocityY
-
+    ball.velocityY = 5
+    ball.VelocityX = 7
 }
 
 function draw() {
     background(rgb(169,169,169));
     edges=createEdgeSprites();
-    ball.bounceOff(edges);
-    ball.setVelocityX = 5
-    ball.setVelocityY = 10
+    ball.bounceOff(edges);  
     
     //write code to bounce off ball from the block1 
     if(isTouching(ball,block1) && ball.bounceOff(block1)){
